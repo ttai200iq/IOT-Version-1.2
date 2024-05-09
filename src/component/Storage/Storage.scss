@@ -1,0 +1,481 @@
+.DAT_Storage {
+    position: relative;
+
+    &_Banner {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right !important;
+
+        &-shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    &_Content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        &_Direct {
+            position: relative;
+            top: 10px;
+            margin: auto;
+            width: 98%;
+            color: white;
+            font-family: Montserrat-SemiBold;
+        }
+
+        &_Tit {
+            width: 98%;
+            margin: auto;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+
+
+            &-content {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                &-title {
+                    font-size: 25px;
+                    align-items: center;
+                    color: white;
+                    font-family: Montserrat-Bold;
+                }
+            }
+
+            &_Filter {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                padding: 8px;
+                border-radius: 5px;
+                overflow: hidden;
+                border: solid 1px rgba(198, 197, 197, 0.5);
+
+                & input {
+                    border: none;
+                    outline: none;
+                    font-size: 14px;
+                    font-family: Montserrat-Regular;
+                }
+            }
+
+            // Nếu cần nút add thì bật lên
+            // &_New {
+            //     cursor: pointer;
+            //     border: none;
+            //     background-color: #0d6efd !important;
+            //     color: white;
+            //     border-radius: 5px;
+            //     font-family: Montserrat-SemiBold;
+            //     padding: 8px;
+
+            //     & span {
+            //         display: flex;
+            //         justify-content: center;
+            //         align-items: center;
+            //         font-size: 14px;
+            //     }
+            // }
+        }
+
+        &_Main {
+            width: 98%;
+            height: 62vh;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            box-shadow: 3px 3px 5px rgb(199, 199, 199, 0.5), -3px -3px 5px rgb(199, 199, 199, 0.5);
+
+            &_Nav {
+                padding: 10px;
+                background-color: rgb(241, 241, 241);
+                border-bottom: solid 1px rgb(199, 199, 199);
+                display: flex;
+                align-items: center;
+
+                gap: 10px;
+
+                &_Item {
+                    min-width: 80px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    font-size: 16px;
+                    color: #0d6efd;
+                    font-family: Montserrat-SemiBold;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+                &_Add {
+                    width: 100%;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    &-Save {
+                        width: 40px;
+                        height: 40px;
+                        outline: none;
+                        border: none;
+                        border-radius: 50%;
+                        background-color: rgb(243, 243, 243);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        &:hover {
+                            background-color: rgb(202, 202, 202);
+                        }
+
+                        &:focus-within {
+                            box-shadow: 0 0 0 4px rgb(136, 136, 136, 0.5);
+                        }
+                    }
+
+                    & form {
+                        width: 200px;
+
+                        display: flex;
+                        align-items: center;
+                        border-radius: 7px;
+                        overflow: hidden;
+
+                        &:focus-within {
+                            box-shadow: 0 0 0 4px rgb(136, 136, 136, 0.5);
+                        }
+
+                        & input {
+                            border-radius: 0;
+                            outline: none;
+                            border: none;
+                            width: 100%;
+                            height: 40px;
+                            background-color: rgb(231, 231, 231);
+                            padding: 10px;
+                        }
+
+                        & button {
+                            outline: none;
+                            border: none;
+                            width: 60px;
+                            height: 40px;
+                            background-color: rgb(231, 231, 231);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+
+            &_List {
+                padding: 10px;
+            }
+        }
+
+
+    }
+
+}
+
+.DAT_FilterbarStorage {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+
+    & input {
+        height: 40px;
+
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+
+    &_CustomPicker {
+        width: calc(100vw - 70px);
+        height: 40px;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    // input[type="date"]::-webkit-inner-spin-button,
+    // input[type="date"]::-webkit-calendar-picker-indicator {
+    //     display: none;
+    //     -webkit-appearance: none;
+    // }
+    &_Date {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #ffffff;
+
+        &:active {
+            background-color: rgb(66, 59, 50, 0.3);
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.DAT_StorageFix {
+    &-group {
+        position: relative;
+        width: 400px;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow:
+            2px 2px 5px rgb(73, 73, 73, 0.2),
+            -2px -2px 5px rgb(67, 67, 67, 0.2);
+
+        &_Head {
+            display: flex;
+            align-items: center;
+            background-color: #0d6efd !important; //rgba(182, 182, 182, 0.4)
+            padding: 16px;
+            color: white;
+            font-family: Montserrat-Bold;
+
+            &_Left {
+                flex: 5;
+            }
+
+            &_Right {
+                display: flex;
+                justify-content: flex-end;
+                flex: 5;
+
+                &_Close {
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    overflow: hidden;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &_Body {
+            font-size: 14px;
+            padding: 16px;
+            color: #505050;
+            border-bottom: solid 1px rgba(198, 197, 197, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &_Row {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                margin: auto;
+                gap: 5px;
+
+                &_Input {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    margin-bottom: 8px;
+
+                    & input {
+                        width: 100%;
+                        height: 30px;
+                        border-radius: 5px;
+                        border: solid 1px rgba(198, 197, 197, 0.5);
+                        padding: 8px;
+                        outline: none;
+                        box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        font-family: Montserrat-Regular;
+                    }
+
+                    & input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        &_Foot {
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px;
+
+            & button {
+                padding: 8px 16px;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                font-family: Montserrat-SemiBold;
+                color: white;
+                font-size: 13px;
+                background-color: #0d6efd;
+            }
+        }
+    }
+}
+
+.DAT_StorageMobile {
+    width: 100%;
+    padding-top: 60px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+        /* Safari and Chrome */
+    }
+
+    &_Tit {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding-top: 10px;
+        padding-left: 10px;
+        font-size: 25px;
+        font-weight: 500;
+        font-family: Montserrat-SemiBold;
+        color: rgb(106, 106, 106);
+        font-size: 20px;
+    }
+
+    &_Content {
+        width: 96%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &_Container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+
+            &_List {
+                display: flex;
+                gap: 10px;
+                border-bottom: 1px solid rgb(218, 218, 218);
+                padding-bottom: 10px;
+                width: 100%;
+
+                &_Left {
+                    &_Item {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 5px;
+                        font-size: 12px;
+                        background-color: #0082ca;
+                        color: white;
+                    }
+                }
+
+                &_Info {
+                    width: 100%;
+
+                    &_Name {
+                        font-family: Montserrat-SemiBold;
+                        font-size: 14px;
+                        color: rgb(0, 0, 255, 0.8);
+                    }
+                }
+            }
+
+            &_Bottom {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 5px;
+
+                &_Time {
+                    font-size: 12px;
+                    color: gray;
+                }
+
+                &_Del {
+                    cursor: pointer;
+                    color: red;
+                    align-items: center;
+                    display: flex;
+                    justify-content: center;
+                    background-color: rgb(255, 228, 196, 0.5);
+                    border: none;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 700px) {
+
+    .DAT_Storage_Content_Main {
+        height: calc(100vh - 200px);
+    }
+
+    .DAT_StorageFix-group {
+
+        width: 400px;
+
+    }
+}

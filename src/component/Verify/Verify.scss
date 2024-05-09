@@ -1,0 +1,46 @@
+.DAT_Verify{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    &_Content{
+            width: 95%;
+            margin: auto;
+            margin-top: 20vh;
+            background-color: #ffffff; 
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.3), -5px -5px 10px rgba(158, 158, 158, 0.3);
+            &_Notif{
+                width: 100%;
+                //border: solid 1px gray;
+                padding: 5px;
+                border-radius: 5px;
+                color: red;
+                background-color: rgba(255, 255, 255);
+                margin-bottom: 10px;
+                text-align: justify;
+            }
+            &_Back{
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                text-decoration: none;
+            }
+    }
+}
+
+
+@media (min-width: 700px) {
+
+    .DAT_Verify {
+        &_Content{
+            width: 500px;
+        }
+    }
+  
+
+  
+  }

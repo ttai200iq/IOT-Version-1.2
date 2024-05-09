@@ -1,0 +1,764 @@
+body {
+  font-family: Montserrat-Regular !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  overscroll-behavior-x: none;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+iframe {
+  display: none;
+}
+
+.DAT_content {
+  position: fixed;
+  display: flex;
+  background-color: #f0f0f0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+
+  &_view {
+    /* background-color: green; */
+    flex: 8.5;
+
+    //height: 100%;
+    overflow-x: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+      /* Safari and Chrome */
+    }
+  }
+}
+
+
+
+.DAT_loading {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.DAT_Model_Tab {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: #dadada;
+  border-radius: 10px 10px 0 0;
+  //border-bottom: solid 1px darkgray;
+  padding: 15px 10px 0px 10px;
+  height: 60px;
+
+
+  &_main {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-wrap: wrap;
+    //align-items: ;
+
+    &_left {
+      border-radius: 35%;
+      top: 20.5px;
+      left: -25px;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: #dadada;
+      box-shadow: 7px 10px 0px rgb(255, 255, 255);
+    }
+
+    &_right {
+      border-radius: 35%;
+      top: 20.5px;
+      right: -25px;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: #dadada;
+      box-shadow: -7px 10px 0px white;
+    }
+
+    &_content2 {
+
+      cursor: pointer;
+      max-width: 100px;
+      font-size: 17px;
+      color: rgb(80, 80, 80);
+      background-color: #dadada;
+      padding: 10px 25px 10px 25px; //   
+      //border-radius: 5px;
+      // background-size: cover;
+      // background-position: center !important;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+    }
+
+
+    &_content1 {
+
+      cursor: pointer;
+      max-width: 350px;
+      font-size: 17px;
+      color: rgb(80, 80, 80);
+      background-color: #dadada;
+      padding: 10px 25px 10px 25px;
+      //border-radius: 5px;
+      // background-size: cover;
+      // background-position: center !important;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+    }
+
+    &_Add {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+
+      & form {
+        display: flex;
+        padding: 5px;
+        border-radius: 5px;
+        border: solid 1px gray;
+        overflow: hidden;
+        background-color: white;
+
+        & input {
+          border: none;
+          outline: none;
+          background-color: white;
+        }
+
+        & button {
+          border: none;
+          outline: none;
+          background-color: white;
+
+        }
+      }
+
+    }
+
+
+  }
+
+
+
+}
+
+.DAT_ModelMobile_Tab {
+  position: relative;
+  //background-color: #ececec;
+  padding-bottom: 5px;
+  border-radius: 10px 10px 0 0;
+  //height: 60px;
+  display: flex;
+  gap: 20px;
+
+  &_content {
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #b4b4b4;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 100%;
+      transform: skew(15deg);
+      transition: all 0.5s;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+
+    &::before {
+      left: -10px;
+      background: #240046;
+    }
+
+    &::after {
+      right: -10px;
+      background: #5a189a;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      width: 58%;
+    }
+
+    &:hover span {
+      color: #e0aaff;
+      transition: 0.3s;
+    }
+
+    & span {
+      color: #03045e;
+      font-size: 18px;
+      transition: all 0.3s ease-in;
+    }
+
+
+    &:hover {
+      background-color: #c6c6c6;
+    }
+
+    & span {
+      width: 200px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+
+  }
+
+  &_list {
+    margin-top: 60px;
+    position: absolute;
+    z-index: 20;
+    width: 250px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 4px 4px rgba(193, 193, 193, 0.5);
+
+    &_item {
+      font-size: 14px;
+      padding: 7px;
+      padding-left: 15px;
+      cursor: pointer;
+      border-bottom: solid 1px rgb(219, 219, 219);
+
+      &:hover {
+        background-color: #c6c6c6;
+      }
+    }
+
+  }
+
+  & select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
+    font-size: 17px;
+    background-color: white;
+    //text-align: center;
+    text-align-last: center;
+    outline: none;
+    border: none;
+
+
+
+
+
+  }
+}
+
+.DAT_Table_Container {
+  position: relative;
+  z-index: 0;
+  overflow-x: scroll !important;
+  overflow-Y: auto !important;
+  height: calc(100vh - 350px);
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 3px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+
+
+
+}
+
+.rdt_Table {
+  position: relative;
+
+  margin-top: 0px;
+  margin-bottom: 20px;
+  //border-top: solid 1px rgb(213, 213, 213);
+  //border-left: solid 1px rgb(213, 213, 213);
+  //border-bottom: solid 1px rgb(213, 213, 213);
+  // overflow-Y: scroll;
+
+  // &::-webkit-scrollbar {
+  //   width: 8px;
+  //   height: 10px;
+
+  // }
+
+  // /* Track */
+  // &::-webkit-scrollbar-track {
+  //   background-color: rgba(0, 0, 0, 0);
+  //   border-radius: 3px;
+  // }
+
+  // /* Handle */
+  // &::-webkit-scrollbar-thumb {
+  //   background: #888;
+  //   border-radius: 10px;
+  // }
+
+  // /* Handle on hover */
+  // &::-webkit-scrollbar-thumb:hover {
+  //   background: #555;
+  // }
+
+
+
+
+  //Head
+  &Head {
+
+    // position: -webkit-sticky !important;
+    // position: sticky !important;
+    //top: 0;
+    //z-index: 1;
+    // background-color: #888;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    border-top: solid 1px rgb(213, 213, 213);
+    border-left: solid 1px rgb(213, 213, 213);
+
+    //1 Hàng ở bên trong Head 
+    &Row {
+      padding: 0;
+
+    }
+  }
+
+  //1 cột ở bên trong TableRow  thuộc Body
+  &Col {
+    color: rgb(68, 68, 68);
+    font-weight: 600;
+    font-size: 12px;
+    font-family: sans-serif;
+    justify-content: center;
+    border-right: solid 1px rgb(213, 213, 213);
+    //box-shadow: 0 0 0 1px rgb(213, 213, 213);
+
+    padding: 5px;
+    background-color: #ececec;
+
+    & div:first-child {
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+    }
+
+  }
+
+
+  //Body
+  &Body {
+    padding: 0;
+
+
+  }
+
+  //1 Hàng Bọc của tất cả các TableCell thuộc Body
+  &Row {
+    padding: 0;
+    //margin: 0;
+    border-left: solid 1px rgb(213, 213, 213);
+    border-bottom: solid 1px rgb(213, 213, 213);
+
+  }
+
+  //1 cột ở bên trong TableRow  thuộc Body
+  &Cell {
+    font-size: 14px;
+    font-weight: 400;
+    border-right: solid 1px rgb(213, 213, 213);
+    //border-bottom: solid 1px rgb(213, 213, 213);
+    justify-content: left;
+    //height: 80px;
+    display: flex;
+    align-items: center;
+
+    & div:first-child {
+      white-space: normal !important;
+      overflow: visible !important;
+
+    }
+  }
+
+  //     // &Header{
+
+  //     // }
+
+  //     // &Footer{
+  //     //     background-color: black;
+  //     // }
+
+
+}
+
+.DAT_Modify {
+  position: absolute;
+  width: 100px;
+  top: 0px;
+  right: 0px;
+  background-color: white;
+  padding: 7px 0 7px 0;
+  border: solid 1px rgb(205, 205, 205);
+  border-radius: 5px;
+
+  // &:hover{
+  //   background-color: #adadad;
+  // }
+
+  &_fix {
+    cursor: pointer;
+    padding-left: 5px;
+
+    &:hover {
+      background-color: #adadad;
+    }
+
+  }
+
+  &_remove {
+    color: red;
+    cursor: pointer;
+    padding-left: 5px;
+
+    &:hover {
+      background-color: #adadad;
+    }
+
+  }
+}
+
+
+.DAT_Table {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+
+  & img {
+    width: 45px;
+    height: 45px;
+    border: solid 4px rgba(79, 79, 79, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+
+
+  }
+
+  &_Infor {
+    &_Name {
+      color: black;
+      //margin-bottom: 8px;
+    }
+
+    &_Addr {
+      font-size: 12px;
+      color: gray;
+    }
+  }
+}
+
+.DAT_TableGroup {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  //gap: 10px;
+  //padding: 5px;
+  border-left: solid 1px rgb(219, 219, 219);
+  border-right: solid 1px rgb(219, 219, 219);
+  border-bottom: solid 1px rgb(219, 219, 219);
+
+  &_ID {
+    width: 128px;
+    color: rgb(108, 108, 108);
+    border-right: solid 1px rgb(219, 219, 219);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_Name {
+    flex: 1;
+    color: rgb(108, 108, 108);
+    padding: 5px;
+    //margin-right: solid 1px rgb(219, 219, 219);
+  }
+
+  &_Edit {
+    width: 100px;
+    color: rgb(108, 108, 108);
+    padding: 5px;
+    border-left: solid 1px rgb(219, 219, 219);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //margin-right: solid 1px rgb(219, 219, 219);
+  }
+}
+
+.rdt_Pagination span {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.rdt_Pagination select {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border: solid 1px rgb(187, 186, 186);
+  border-radius: 5px;
+  outline: none;
+}
+
+
+.rdt_Pagination select:focus {
+  border: solid 4px rgb(176, 212, 254);
+}
+
+.DAT_PopupBG {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(128, 128, 128, 0.7);
+  top: 0;
+  right: 0;
+  z-index: 25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.DAT_ViewPopup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-color: rgb(188, 188, 188, 0.7);
+  top: 0px;
+  right: 0;
+  z-index: 30;
+  overflow: hidden;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .DAT_Table_Container {
+
+    overflow-x: scroll !important;
+    overflow-Y: auto !important;
+    height: 43vh;
+
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 10px;
+
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      background-color: rgba(0, 0, 0, 0);
+      border-radius: 3px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+
+
+
+
+  }
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    -webkit-transform: translateY(30px)
+  }
+
+  to {
+    -webkit-transform: translateY(0)
+  }
+}
+
+@keyframes animatetop {
+  from {
+    transform: translateY(20px)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+@font-face {
+  font-family: "segoeui";
+  src: url("../public/assets/fonts/segoeui/segoeui.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "segoeuib";
+  src: url("../public/assets/fonts/segoeui/segoeuib.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "meytropolis";
+  src: url("../public/assets/fonts/metropolis/Metropolis-Thin.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Regular.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Bold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../public/assets/fonts/montserrat/Montserrat-SemiBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat-Medium";
+  src: url("../public/assets/fonts/montserrat/Montserrat-Medium.ttf");
+  font-weight: 800;
+  font-style: normal;
+}

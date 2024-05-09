@@ -1,0 +1,14 @@
+{
+  "name": "IOT DAT",
+  "icons": [
+
+    {
+      "src": "/dat_icon/logo-dat.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/",
+  "display": "fullscreen",
+  "theme_color": "white"
+}

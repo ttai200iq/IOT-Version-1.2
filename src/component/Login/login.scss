@@ -1,0 +1,188 @@
+.DAT_Login {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+  background-color: #E4EBF5;
+  background-image: url("../../../public/banner/Login_Mobile-1.png");
+  background-position: center bottom !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+
+  }
+
+  &_Form {
+    width: 90%;
+    margin: auto;
+    margin-top: calc(15vh);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 78, 139, 0.75);
+    box-shadow: 5px 5px 10px rgba(73, 73, 73, 0.5), -5px -5px 10px rgba(65, 65, 65, 0.5);
+
+    & p {
+      color: rgb(255, 255, 255);
+      font-size: x-large;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    &-input {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      width: 80%;
+      margin: auto;
+      height: 40px;
+      margin-bottom: 15px;
+      border: solid 1px white;
+      border-radius: 10px;
+
+      & p {
+        color: white;
+        min-width: 50px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+
+        & ion-icon {
+          pointer-events: none;
+        }
+      }
+
+      & input {
+        font-family: Montserrat-Regular;
+        padding: 10px;
+        -webkit-box-sizing: border-box;
+        /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;
+        /* Firefox, other Gecko */
+        box-sizing: border-box;
+        height: 40px;
+        width: 100%;
+        background: none !important;
+        border: none;
+        outline: none;
+        color: white;
+        -webkit-box-sizing: border-box;
+        /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;
+        /* Firefox, other Gecko */
+
+        &::placeholder {
+          color: rgb(255, 255, 255);
+        }
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #ffffff;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+    }
+
+    &-box {
+      margin: auto;
+      width: 80%;
+      margin-bottom: 20px;
+      text-align: left;
+      color: #ffffff;
+
+      & input {
+        display: none;
+      }
+
+      & input+label:before {
+        cursor: pointer;
+        margin-right: 10px;
+        padding-bottom: 5px;
+        display: block;
+        content: "\2713";
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        border: 1px solid #ffffff;
+        color: transparent;
+        transition: 0.2s;
+        border-radius: 2px;
+      }
+
+      & input:checked+label:before {
+        //background-color: rgb(255, 255, 255);
+        color: #ffffff;
+      }
+
+      & input+label:active:before {
+        transform: scale(0);
+      }
+    }
+
+    & button {
+      border-radius: 10px;
+      background-color: rgba(192, 192, 192, 0.3);
+      color: white;
+      cursor: pointer;
+      width: 80%;
+      height: 40px;
+      outline: none;
+      border: none;
+    }
+
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 700px) {
+
+  .DAT_Login_Form {
+    height: 330px;
+    margin-top: calc(38vh);
+    width: 400px;
+    border-radius: 10px;
+
+  }
+
+  .DAT_Login {
+    background-image: url("../../../public/banner/Login_PC-1.png");
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}

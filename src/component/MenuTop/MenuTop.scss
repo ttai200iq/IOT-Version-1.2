@@ -1,0 +1,576 @@
+.DAT_Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 58px;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.3);
+    display: flex;
+    padding: 8px 0px;
+    //padding-right: 24px;
+
+    &-menu {
+        position: relative;
+        //display: flex;
+        width: 52px;
+        height: 44px;
+
+        // align-items: center;
+        // justify-content: flex-end;
+        &-btn {
+
+            cursor: pointer;
+            height: 44px;
+            width: 44px;
+            margin-left: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: white;
+            padding: 0px;
+            border: 0px;
+
+            &:focus {
+                box-shadow: 0 0 0 4px rgba(109, 109, 109, 0.4);
+            }
+
+            &:hover {
+                background-color: rgba(159, 155, 155, 0.4);
+
+            }
+
+        }
+
+
+    }
+
+    &-left {
+        &-logo {
+            width: 192px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+        }
+
+    }
+
+    &-center {
+        flex: 4;
+
+        &-group {
+            display: flex;
+            width: 232px;
+            height: 44px;
+            border: 0px;
+            align-items: center;
+
+            &:focus-within {
+                border-radius: 5px;
+                box-shadow: 0 0 0 4px rgb(170, 194, 255);
+            }
+
+            & input {
+                width: 181px;
+                height: 44px;
+                padding: 10px 0 10px 10px;
+                border-radius: 5px 0 0 5px;
+                outline: none;
+                border: white;
+                background-color: rgb(239, 239, 239);
+            }
+
+            &-icon {
+
+                width: 51px;
+                height: 44px;
+                padding: 0px;
+                font-size: 20px;
+                border-radius: 0 5px 5px 0;
+                text-align: center;
+                line-height: 40px;
+
+                outline: none;
+                border: white;
+                color: gray;
+                background-color: rgb(239, 239, 239);
+
+                align-items: center;
+            }
+
+
+        }
+
+
+
+    }
+
+    &-right {
+        flex: 6;
+        display: flex;
+        justify-content: flex-end;
+
+        &-item {
+            position: relative;
+            cursor: pointer;
+            height: 44px;
+            width: 44px;
+            border-radius: 50%;
+            background-color: white;
+            padding: 0px;
+            border: 0px;
+            margin-right: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //overflow: hidden;
+
+            & img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            & ion-icon {
+                cursor: pointer;
+                font-size: 20px;
+                color: rgba(159, 155, 155, 1);
+            }
+
+            & span{
+                position: absolute;
+                top:0;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: rgb(255, 37, 37);
+                color: white;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            &:focus {
+                //border: solid 4px rgba(159, 155, 155, 0.4);
+                box-shadow: 0 0 0 4px rgba(109, 109, 109, 0.4);
+            }
+
+            &:hover {
+                background-color: rgba(159, 155, 155, 0.4);
+
+            }
+
+           
+
+        }
+
+
+
+    }
+
+
+}
+
+.DAT_Acount {
+    //display: none;
+    position: relative;
+    top: 70px;
+    width: 95%;
+    margin: auto;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.3), -5px -5px 10px rgba(158, 158, 158, 0.3);
+    -webkit-animation: animatetop 0.6s;
+    animation: animatetop 0.6s;
+
+    &_user {
+        color: rgb(102, 102, 102);
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+
+        &_avatar {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 0px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+            overflow: hidden;
+
+            & img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+           
+        }
+
+        &_inf {
+            &-name{
+                color: black;
+            }
+            &-mail{
+                color: #b0b0b0;
+                font-size: 12px;
+            }
+        }
+    }
+
+
+    &_line {
+        height: 1px;
+        width: 100%;
+        background-color: gray;
+        //border-bottom: solid 1px gray;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+
+    &_setting {
+        color: rgb(102, 102, 102);
+        display: flex;
+        padding: 4px 16px;
+        height: 30px;
+        cursor: pointer;
+
+
+        & p {
+            margin-right: 10px;
+            color: rgb(157, 157, 157);
+        }
+
+        &:hover {
+            background-color: rgb(207, 207, 207);
+        }
+    }
+
+
+    &_logout {
+        color: rgb(102, 102, 102);
+        display: flex;
+        padding: 4px 16px;
+        height: 30px;
+        cursor: pointer;
+
+        & p {
+            height: 30px;
+            margin-right: 10px;
+            color: rgb(157, 157, 157);
+        }
+
+        &:hover {
+            background-color: rgb(207, 207, 207);
+        }
+
+    }
+
+}
+
+
+.DAT_searchbar {
+    position: relative;
+    margin: auto;
+
+    border-radius: 10px;
+    z-index: 15;
+    width: 90%;
+    height: 95px;
+    top: 80px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 10px rgba(158, 158, 158, 0.3), -5px -5px 10px rgba(158, 158, 158, 0.3);
+    -webkit-animation: animatetop 0.6s;
+    animation: animatetop 0.6s;
+
+
+    &-group {
+        height: 55px;
+        width: 100%;
+        display: flex;
+        border: solid 5px rgb(255, 255, 255);
+
+        &:focus-within {
+            border-radius: 11px;
+            display: flex;
+            border: solid 5px rgb(170, 194, 255);
+        }
+
+        & input {
+            width: 100%;
+            padding-left: 10px;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+            border: white;
+            background-color: rgb(239, 239, 239);
+        }
+
+        & button {
+            padding-top: 5px;
+            width: 70px;
+            font-size: 20px;
+            border-radius: 0 5px 5px 0;
+            outline: none;
+            border: white;
+            color: gray;
+
+            background-color: rgb(239, 239, 239);
+        }
+
+
+    }
+}
+
+
+
+.DAT_Notification {
+
+    position: relative;
+    margin: auto;
+    width: 95%;
+    max-height: 80vh;
+    margin-top: 70px;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    box-shadow: 0px 0px 4px 5px rgba(158, 158, 158, 0.3);
+    -webkit-animation: animatetop 0.6s;
+    animation: animatetop 0.6s;
+    overflow: hidden;
+    
+   
+
+
+
+    &_head {
+        z-index: 10;
+        width: 100%;
+        height: 60px;
+        padding: 14px;
+        background-color: #106ffd;
+        color: white;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+
+        & ion-icon {
+            margin-right: 8px;
+        }
+
+    }
+
+    &_content {
+        width: 100%;
+        position: relative;
+        min-height: 200px;
+        max-height: 70vh;
+        margin: auto;
+        padding: 10px;
+        overflow-y: scroll;
+        padding-top: 10px;
+        padding-bottom: 20px;
+
+
+
+        &::-webkit-scrollbar {
+            width: 8px;
+          
+
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 3px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #b0b0b0;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+      
+
+        &_item{
+            position: relative;
+            padding: 7px;
+            border-radius: 7px;
+            cursor: pointer;
+            &:hover{
+                
+                background-color: rgb(243, 243, 243);
+            }
+            &-group {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                
+               
+                // padding-bottom: 10px;
+            
+               
+                
+                &-icon {
+                    position: relative;
+                    min-width: 50px;
+                    min-height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+    
+                    & ion-icon {
+                        color: white;
+                    }
+                    & span{
+                        position: absolute;
+                        bottom: -5px;
+                        right: -5px;
+                        font-size: 12px;
+                        padding: 2px;
+                        border-radius: 4px;
+                        background-color: rgba(0, 255, 13, 0.8);
+                        color: white;
+                        border: solid 1px white;
+                    }
+    
+                }
+    
+                &-data {   
+                    //margin-top: 20px;
+                    width: 100%;
+                    //height: 70px;
+                    overflow: hidden;
+                    align-items: center;
+                    text-align: justify;
+                    // max-width: calc(100vw - 8.5rem);
+                    // white-space: nowrap;
+              
+                    // text-overflow: ellipsis;
+                    &-tit {
+                        max-height: 120px;
+                        overflow: hidden;
+                        color: black;
+                        font-size: 15px;  
+    
+                    }
+                 
+    
+                }
+    
+    
+            }
+            &-time {
+                
+                display: flex;
+                justify-content: right;
+                color: rgb(168, 168, 168);
+                font-size: 12px;
+            }
+            &-edit{
+                
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                box-shadow: 0 0 4px 4px rgba(83, 83, 83, 0.1);
+                &:hover{
+                    background-color: rgb(207, 207, 207);
+                }
+
+                & ion-icon{
+                    color: red;
+                }
+
+            }
+        }
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 900px) {
+
+
+    // .DAT_searchgroup2 input{
+    //     padding-left: 10px;
+    //     border-radius: 5px 0 0 5px;
+    //     outline: none;
+    //     border:  white;
+    //     background-color: rgb(239, 239, 239);
+    // }
+
+    .DAT_Acount {
+        //margin-right: 20px;
+        position: fixed;
+        right: 15px;
+        width: 250px;
+    }
+
+    .DAT_Notification {
+        //display: none;
+        //margin-right: 20px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+        width: 400px;
+        max-height: 90vh;
+    }
+
+
+   
+
+}

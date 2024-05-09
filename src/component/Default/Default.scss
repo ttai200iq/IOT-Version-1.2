@@ -1,0 +1,91 @@
+.DAT_Default{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #434343;
+
+  
+    &_Content{
+          width: 95%;
+          margin: auto;
+          margin-top: 20vh;
+          background-color: #ffffff;
+          border-radius: 7px;
+          padding: 20px;
+          background-image: url('../../../public/banner/smarttech2.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: bottom center !important;
+          box-shadow: 0 0 4px 4px rgba(238, 238, 238, 0.5);
+  
+          &-Title{
+              font-size: 18px;
+              //text-align: center;
+              color: #ffffff;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              margin-bottom: 5px;
+              padding: 5px;
+              border-radius: 5px 5px 0 0;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+
+              & ion-icon{
+                pointer-events: none;
+              }
+              
+          }
+          
+          &-List{
+             
+              border: solid 1px rgb(213, 213, 213);
+              border-radius: 10px;
+              cursor: pointer;
+              overflow: hidden;
+              background-color: rgb(106, 106, 106,0.5);
+              
+             
+              &-Item{
+                padding-left: 10px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: #ffffff;
+                &:hover{
+                    background-color: rgba(218, 218, 218, 0.4);
+                }
+              }
+
+              &-NoItem{
+                padding: 10px;
+                text-align: justify;
+                color: #ffffff;
+              }
+          }
+    }
+  }
+  
+
+
+
+
+@media (min-width: 700px) {
+
+    .DAT_Default {
+        &_Content{
+            width: 500px;
+        }
+    }
+  
+
+  
+  }

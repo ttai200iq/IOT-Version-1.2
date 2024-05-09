@@ -1,0 +1,769 @@
+.DAT_Export {
+  position: relative;
+
+  &_Banner {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right !important;
+
+    &-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  &_Content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &_Direct {
+      position: relative;
+      top: 10px;
+      margin: auto;
+      width: 98%;
+      color: white;
+      font-family: Montserrat-SemiBold;
+    }
+
+    &_Tit {
+      width: 98%;
+      margin: auto;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+
+      &-content {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &-title {
+          font-size: 25px;
+          align-items: center;
+          color: white;
+          font-family: Montserrat-Bold;
+        }
+      }
+
+      &_Filter {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 8px;
+        border-radius: 5px;
+        overflow: hidden;
+        border: solid 1px rgba(198, 197, 197, 0.5);
+
+        & input {
+          border: none;
+          outline: none;
+          font-size: 14px;
+          font-family: Montserrat-Regular;
+        }
+      }
+
+    }
+
+    &_Main {
+      width: 98%;
+      margin: auto;
+      border-radius: 5px;
+      background-color: rgb(255, 255, 255);
+      overflow: hidden;
+      height: 62vh;
+      box-shadow:
+        3px 3px 5px rgb(199, 199, 199, 0.5),
+        -3px -3px 5px rgb(199, 199, 199, 0.5);
+
+      &_Nav {
+        padding: 10px;
+        background-color: rgb(241, 241, 241);
+        border-bottom: solid 1px rgb(199, 199, 199);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: Montserrat-Semibold;
+
+        &_Item1 {
+          cursor: pointer;
+          min-width: 80px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: 16px;
+          color: gray;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &_Item2 {
+          cursor: pointer;
+          min-width: 80px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          font-size: 16px;
+          color: gray;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &_Add {
+          width: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          &-Save {
+            width: 40px;
+            height: 40px;
+            outline: none;
+            border: none;
+            border-radius: 50%;
+            background-color: rgb(243, 243, 243);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              background-color: rgb(202, 202, 202);
+            }
+
+            &:focus-within {
+              box-shadow: 0 0 0 4px rgb(136, 136, 136, 0.5);
+            }
+          }
+
+          & form {
+            width: 200px;
+
+            display: flex;
+            align-items: center;
+            border-radius: 7px;
+            overflow: hidden;
+
+            &:focus-within {
+              box-shadow: 0 0 0 4px rgb(136, 136, 136, 0.5);
+            }
+
+            & input {
+              border-radius: 0;
+              outline: none;
+              border: none;
+              width: 100%;
+              height: 40px;
+              background-color: rgb(231, 231, 231);
+              padding: 10px;
+            }
+
+            & button {
+              outline: none;
+              border: none;
+              width: 60px;
+              height: 40px;
+              background-color: rgb(231, 231, 231);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+      }
+
+      &_List {
+        height: 62vh;
+        padding: 10px;
+
+        &_Null {
+          height: 100%;
+          width: 95%;
+          margin: auto;
+          border-radius: 5px;
+          display: flex;
+          background-color: white;
+          margin-bottom: 10px;
+
+          &_Content {
+            margin: auto;
+            text-align: center;
+            color: red;
+            font-size: 20px;
+            font-family: Montserrat-Regular;
+          }
+        }
+
+        &_Head {
+          background-color: #0082ca;
+          color: white;
+          padding: 10px;
+          width: 95%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+
+.DAT_Config {
+  &-Content {
+    position: relative;
+    width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow:
+      2px 2px 5px rgb(73, 73, 73, 0.2),
+      -2px -2px 5px rgb(67, 67, 67, 0.2);
+
+    &_Head {
+      display: flex;
+      align-items: center;
+      background-color: #0d6efd !important; //rgba(182, 182, 182, 0.4)
+      padding: 16px;
+      color: white;
+      font-family: Montserrat-Bold;
+
+      &_Left {
+        flex: 5;
+      }
+
+      &_Right {
+        display: flex;
+        justify-content: flex-end;
+        flex: 5;
+
+        &_Close {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &_Body {
+      padding: 16px;
+      border-bottom: solid 1px rgba(198, 197, 197, 0.5);
+
+      & input {
+        width: 100%;
+        height: 30px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: solid 1px rgba(198, 197, 197);
+        padding: 8px;
+        outline: none;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        font-family: Montserrat-Regular;
+      }
+
+      & input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+
+    &_Foot {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px;
+
+      & button {
+        padding: 8px 16px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-family: Montserrat-SemiBold;
+        color: white;
+        font-size: 13px;
+        background-color: #0d6efd;
+      }
+    }
+  }
+}
+
+.DAT_ConfigMobile {
+  width: 98%;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  height: 62vh;
+  box-shadow:
+    3px 3px 5px rgb(199, 199, 199, 0.5),
+    -3px -3px 5px rgb(199, 199, 199, 0.5);
+
+  &_Container {
+    width: 95%;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    margin-bottom: 10px;
+
+    &_List {
+      display: flex;
+      margin: 10px;
+      padding: 10px;
+      gap: 30px;
+      margin-bottom: 10px;
+      border: solid 1px rgba(218, 218, 218, 0.5);
+      // border-radius: 5px;
+
+      &_Left {
+        &_Item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 70px;
+          height: 70px;
+          border-radius: 5px;
+          font-size: 12px;
+          background-color: #0082ca;
+          color: white;
+        }
+      }
+
+      &_Right {
+        align-items: center;
+        width: 100%;
+        max-height: 150px;
+        // Hidden scrollbar
+        overflow-y: scroll;
+
+        &_Header {
+          font-size: 14px;
+          font-family: Montserrat-SemiBold;
+          margin-bottom: 8px;
+        }
+
+        &_Item1 {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 22px;
+        }
+
+        &_Item2 {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+}
+
+.DAT_FilterbarExport {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+
+  & input {
+    height: 40px;
+
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+
+  &_CustomPicker {
+    width: calc(100vw - 70px);
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  // input[type="date"]::-webkit-inner-spin-button,
+  // input[type="date"]::-webkit-calendar-picker-indicator {
+  //     display: none;
+  //     -webkit-appearance: none;
+  // }
+  &_Date {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    &:active {
+      background-color: rgb(66, 59, 50, 0.3);
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+
+.DAT_ConfigMobilePopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(236, 236, 236);
+  z-index: 25;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &_Form {
+    width: 95%;
+    position: relative;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 20px;
+
+    &_Head {
+      background-color: white;
+      color: white;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+      padding: 16px;
+      margin-bottom: 10px;
+
+      &_Left {
+        font-family: Montserrat-Bold;
+        font-size: 18px;
+        color: blue;
+      }
+
+      &_Right {
+        flex: 5;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: flex-end;
+        gap: 10px;
+
+        &_Close {
+          width: 30px;
+          height: 30px;
+          display: flex;
+          flex-wrap: wrap;
+          overflow: hidden;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          cursor: pointer;
+
+          &_Icon {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+
+            &:hover {
+              background-color: rgb(255, 0, 0, 0.5);
+            }
+          }
+        }
+      }
+    }
+
+    &_Row {
+      display: flex;
+      gap: 10px;
+      background-color: white;
+      padding: 15px;
+      padding-bottom: 5px;
+
+      &_Item {
+        position: relative;
+        width: 100%;
+        // padding: 10px;
+
+        &_Label {
+          font-size: 16px;
+          display: flex;
+          margin-bottom: 8px;
+        }
+
+        & input {
+          height: 44px;
+          width: 100%;
+          border-radius: 5px;
+          border: solid 1px rgb(156, 155, 155, 0.3);
+          padding: 14px 18px;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+        }
+      }
+
+      &_Button {
+        height: 34px;
+        border: none;
+        color: white;
+        background-color: #0082ca;
+        font-weight: 400;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.DAT_ConfigExRegister {
+  display: flex;
+  gap: 10px;
+}
+
+.DAT_ListExportM {
+  width: 96%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+  }
+
+  &_Container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+
+    &_List {
+      display: flex;
+      gap: 10px;
+      border-bottom: 1px solid rgb(218, 218, 218);
+      padding-bottom: 10px;
+      width: 100%;
+
+      &_Left {
+        &_Item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 80px;
+          height: 80px;
+          border-radius: 5px;
+          font-size: 12px;
+          background-color: #0082ca;
+          color: white;
+        }
+      }
+
+      &_Right {
+        &_Info {
+          width: 100%;
+
+          &_Name {
+            font-family: Montserrat-SemiBold;
+            font-size: 14px;
+            color: rgb(0, 0, 255, 0.8);
+          }
+        }
+
+        &_Small {
+          &_Company {
+            font-family: Montserrat-SemiBold;
+            font-size: 12px;
+          }
+
+          &_Address {
+            font-family: Montserrat-Regular;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &_Bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 5px;
+
+      &_Time {
+        font-size: 12px;
+        color: gray;
+      }
+
+      &_Del {
+        cursor: pointer;
+        color: red;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(255, 228, 196, 0.5);
+        border: none;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.DAT_ExportList {
+  margin-top: 58px;
+  margin-bottom: 70px;
+
+  &_HeadTit {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Montserrat-SemiBold;
+    color: rgb(106, 106, 106);
+    font-size: 20px;
+  }
+
+  &_Content {
+
+    &_Tit {
+      width: 96%;
+      margin: auto;
+      padding-top: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    &_List {
+      width: 96%;
+      margin: auto;
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &_Item {
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+
+        &_GroupInfo {
+          display: flex;
+          gap: 10px;
+          border-bottom: 1px solid rgb(218, 218, 218);
+          padding-bottom: 10px;
+          width: 100%;
+
+          &_Code {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 5px;
+            font-size: 12px;
+            background-color: #0082ca;
+            color: white;
+          }
+
+          &_Info {
+            display: flex;
+
+            &_Gateway {
+              font-family: Montserrat-SemiBold;
+            }
+          }
+        }
+
+        &_Bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 5px;
+
+          &_Del {
+            cursor: pointer;
+            color: red;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(255, 228, 196, 0.5);
+            border: none;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 700px) {
+  .DAT_Export_Content_Main {
+    position: relative;
+    width: 98%;
+    height: calc(100vh - 200px);
+    margin: auto;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+}

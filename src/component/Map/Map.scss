@@ -1,0 +1,154 @@
+.DAT_Map {
+    position: relative;
+
+    &_Banner {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right !important;
+
+        &_Shadow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+
+
+        }
+    }
+
+    &_Content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding-top: 60px;
+
+        &_Direct {
+            position: relative;
+            top: 10px;
+            margin: auto;
+            width: 98%;
+            color: white;
+        }
+
+        &_Tit {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            display: flex;
+            width: 98%;
+            margin: auto;
+            align-items: center;
+
+            &-content {
+                text-wrap: nowrap;
+                width: 250px;
+                font-size: 35px;
+                font-weight: 400;
+                color: whitesmoke;
+
+            }
+
+            &-icon {
+                width: 40px;
+                display: flex;
+                align-items: center;
+
+                ion-icon {
+                    color: gray;
+                    font-size: 32px;
+                }
+            }
+
+
+            & img {
+                margin-top: 5px;
+                margin-right: 5px;
+                height: 32px;
+                width: 32px;
+                filter: invert(56%) sepia(1%) saturate(440%) hue-rotate(92deg) brightness(93%) contrast(91%);
+            }
+
+
+
+        }
+
+        &_Main {
+            width: 98%;
+            height: 72vh;
+            margin: auto;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+
+            &_Nav {
+                padding: 10px;
+                background-color: rgb(241, 241, 241);
+                border-bottom: solid 1px rgb(199, 199, 199);
+                display: flex;
+                gap: 10px;
+
+                &_Item {
+                    cursor: pointer;
+                }
+
+                &_Option {
+                    & select {
+                        min-width: 200px;
+                        height: 40px;
+                        border-radius: 5px;
+                        border: none;
+                        background-color: rgb(255, 255, 255);
+                        padding-left: 10px;
+
+                    }
+                }
+
+            }
+
+
+            &_Map {
+                width: 100%;
+                height: 100%;
+                //padding: 10px;
+
+            }
+        }
+    }
+}
+
+.DAT_marker {
+    height: 60px;
+    width: 120px;
+    text-align: left;
+
+    /* background-color: aqua; */
+    &-bg {
+        background-image: url("../../../public/dat_icon/location.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+
+    &-lb {
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+@media (min-width: 900px) {
+
+}

@@ -1,0 +1,59 @@
+.DAT_Raisebox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // background-color: rgb(128, 128, 128, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_Box {
+        width: 400px;
+        background-color: white;
+        border-radius: 5px;
+        overflow: hidden;
+
+        &_Title {
+            background-color: #0d6efd !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            padding: 16px;
+            // width: 100%;
+            font-family: Montserrat-Bold;
+
+            &_Close {
+                cursor: pointer;
+            }
+        }
+
+        &_Content {
+            font-size: 14px;
+            padding: 16px;
+            // color: gray;
+            width: 100%;
+            // height: 100px;
+            display: flex;
+            align-items: center;
+            border-bottom: solid 1px rgba(198, 197, 197, 0.5);
+        }
+
+        &_Button {
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px;
+
+            &_Confirm {
+                background-color: #0d6efd;
+                border: none;
+                border-radius: 5px;
+                color: #fff;
+                cursor: pointer;
+                font-size: 13px;
+                font-family: Montserrat-SemiBold;
+                padding: 8px 16px;
+            }
+        }
+    }
+}
